@@ -14,6 +14,14 @@ const modalPhone = document.querySelector('[name=modal-phone]');
 const modalComment = document.querySelector('[name=modal-comment]');
 const modalForm = document.querySelector('.modal__form');
 
+const phoneNumber = document.querySelectorAll('[type=tel]');
+let smoothLinks = document.querySelectorAll('a[href^="#link"]');
+
+let isStorage = true;
+let nameStorage = '';
+let phoneStorage = '';
+let commentStorage = '';
+
 const isEscEvent = (evt) => {
   return evt.key === 'Escape' || evt.key === 'Esc';
 };
@@ -32,11 +40,6 @@ if (noJs) {
   body.classList.remove('no-js');
   hiddeDropdownMenu();
 }
-
-let isStorage = true;
-let nameStorage = '';
-let phoneStorage = '';
-let commentStorage = '';
 
 try {
   nameStorage = localStorage.getItem('nameStorage');
@@ -142,8 +145,6 @@ document.querySelectorAll('.footer__title-button').forEach((item) => {
   })
 })
 
-let smoothLinks = document.querySelectorAll('a[href^="#link"]');
-
 if (smoothLinks) {
   smoothLinks.forEach(function (item) {
     item.addEventListener('click', (evt) => {
@@ -158,8 +159,6 @@ if (smoothLinks) {
     });
   });
 }
-
-const phoneNumber = document.querySelectorAll('[type=tel]');
 
 const setMask = function (input) {
   input.addEventListener('focus', (evt) => {
