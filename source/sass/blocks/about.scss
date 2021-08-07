@@ -1,0 +1,116 @@
+.about__body {
+  position: relative;
+  padding: 0 0 110px 289px;
+  max-width: 1270px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 220px;
+    height: 317px;
+    background-image: url(../../img/about-2005-desktop.png);
+    background-repeat: no-repeat;
+    left: 78px;
+    top: 6px;
+  }
+
+  @media (max-width: $tablet) {
+    padding: 0 0 85px 187px;
+
+    &::before {
+      width: 251px;
+      height: 362px;
+      background-image: url(../../img/about-2005-tablet.png);
+      background-repeat: no-repeat;
+      left: -25px;
+      top: 0;
+    }
+  }
+
+  @media (max-width: $mobile) {
+    padding: 23px 0 65px 0;
+    &::before {
+      display: none;
+    }
+  }
+}
+.about__body h2 {
+  font-family: "roboto condensed", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 51px;
+  color: #666666;
+  margin: 0 0 23px 0;
+
+  @media (max-width: $tablet) {
+    font-size: 32px;
+    line-height: 45px;
+  }
+
+  @media (max-width: $mobile) {
+    font-size: 28px;
+    line-height: 39px;
+  }
+}
+.about__body p {
+  margin: 0 0 20px 0;
+
+  &:last-of-type {
+    margin: 0 0 38px 0;
+  }
+
+  @media (max-width: $tablet) {
+    margin: 0 0 18px 0;
+
+    &:last-of-type {
+      margin: 0 0 41px 0;
+    }
+  }
+
+  @media (max-width: $mobile) {
+    margin: 0 0 38px 0;
+
+    &:last-of-type {
+      margin: 0 0 30px 0;
+    }
+  }
+}
+.about__text--dots {
+  display: none;
+
+  @media (max-width: $tablet) {
+    display: inline;
+  }
+}
+.about__text--hidden {
+  @media (max-width: $tablet) {
+    display: none;
+  }
+}
+.about__button {
+  font-family: "roboto condensed", "Arial", sans-serif;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 180px;
+  height: 45px;
+  color: $blueColor;
+  border: 1px solid $blueColor;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
+  &:hover {
+    border: 1px solid rgba($blueColor, 0.8);
+    color: rgba($blueColor, 0.8);
+  }
+
+  &:active {
+    border: 1px solid rgba($blueColor, 0.3);
+    color: rgba($blueColor, 0.3);
+  }
+}

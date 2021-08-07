@@ -1,0 +1,145 @@
+.header {
+  min-width: 320px;
+  position: absolute;
+  width: 100%;
+  padding: 33px 0 0 0;
+  z-index: 10;
+
+  @media (max-width: $tablet) {
+    padding: 20px 0 0 0;
+  }
+
+  @media (max-width: $mobile) {
+    padding: 17px 0 0 0;
+  }
+}
+.header__container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 14px;
+
+  @media (max-width: $tablet) {
+    padding: 0 25px;
+  }
+
+  @media (max-width: $mobile) {
+    padding: 0 15px;
+  }
+}
+.header__body {
+  display: flex;
+  align-items: center;
+}
+.header__logo {
+  margin: 0 auto 0 0;
+  flex-shrink: 0;
+  align-self: flex-start;
+}
+.header__logo img {
+  display: block;
+  @media (max-width: $mobile) {
+    width: 38px;
+    height: 38px;
+  }
+}
+.header__contacts {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  width: 100%;
+}
+.header__email-link,
+.header__phone-link {
+  font-size: 16px;
+  line-height: 18px;
+  color: $whiteColor;
+  text-decoration: none;
+  margin: 5px 0 5px 88px;
+  position: relative;
+
+  &:hover {
+    color: rgba($blueColor, 0.8);
+  }
+
+  &:active {
+    color: rgba($blueColor, 0.3);
+  }
+
+  @media (max-width: $tablet) {
+    margin: 0 0 0 58px;
+  }
+
+  @media (max-width: $mobile) {
+    margin: 0 0 0 48px;
+  }
+}
+.header__email-link {
+  padding: 0 0 0 40px;
+
+  @media (max-width: $tablet) {
+    padding: 0;
+  }
+}
+.header__phone-link {
+  padding: 0 0 0 34px;
+
+  @media (max-width: $tablet) {
+    padding: 0;
+
+  }
+}
+.header__email-link span,
+.header__phone-link span {
+  @media (max-width: $tablet) {
+    display: none;
+  }
+}
+.header__email-link svg {
+  margin: 2px 0 0 -40px;
+  position: absolute;
+
+  @media (max-width: $tablet) {
+    width: 25px;
+    height: 19px;
+    position: static;
+    margin: 2px 0 0 0px;
+  }
+}
+.header__phone-link svg {
+  margin: 0 0 0 -35px;
+  position: absolute;
+
+  @media (max-width: $tablet) {
+    position: static;
+    width: 24px;
+    height: 24px;
+    margin: 0 0 0 -24px;
+  }
+}
+.header__button-wrapper {
+  margin: 5px 0 0 51px;
+  align-self: flex-start;
+
+  @media (max-width: $tablet) {
+    display: none;
+  }
+}
+.header__button {
+  padding: 0;
+  width: 180px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    border: 1px solid rgba($blueColor, 0.8);
+    color: rgba($blueColor, 0.8);
+  }
+
+  &:active {
+    border: 1px solid rgba($blueColor, 0.3);
+    color: rgba($blueColor, 0.3);
+  }
+}
