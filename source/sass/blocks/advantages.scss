@@ -1,32 +1,5 @@
 .advantages {
   position: relative;
-
-  // &::before {
-  //   content: "";
-  //   position: absolute;
-  //   height: 1343px;
-  //   background-image: url(../img/advantages-dekor.svg);
-  //   background-repeat: no-repeat;
-  //   background-position-y: -30px;
-  //   background-position-x: calc(50% + -135px);
-  //   top: 0;
-  //   left: 0;
-  //   right: 0;
-  //   bottom: 0;
-  //   z-index: -1;
-  // }
-
-  // @media (max-width: $tablet) {
-  //   &::before {
-  //     background-image: url(../img/advantages-dekor-tablet.svg);
-  //     background-size: auto;
-  //   }
-  // }
-
-  // @media (max-width: $mobile) {
-  //   &::before {
-  //   }
-  // }
 }
 .advantages__body {
   padding: 112px 0 74px 0;
