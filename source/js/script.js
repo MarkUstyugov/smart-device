@@ -198,4 +198,16 @@ if (phoneNumber) {
   }
 }
 
+const copyright = document.querySelector('.footer__copyright');
+const bottomCopyright = copyright.cloneNode(true);
+const footerRights = document.querySelector('.footer__rights');
 
+if (bottomCopyright) {
+  bottomCopyright.classList.add('footer__bottom-item');
+}
+
+const insertBeforeElement = (newNode, referenceNode) => {
+  referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
+}
+
+insertBeforeElement(bottomCopyright, footerRights);

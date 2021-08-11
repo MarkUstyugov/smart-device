@@ -1,6 +1,5 @@
 .consalt {
   background-color: $blueColor;
-  min-height: 670px;
   background-image: url(../img/promo-dekor.svg), url(../../img/consalt-dekor-small.svg);
   background-repeat: no-repeat;
   background-position: calc(50% + -458px) 52%, calc(50% + 860px) 61%;
@@ -20,18 +19,18 @@
   }
 }
 .consalt__body {
-  padding: 91px 0 70px 0;
+  padding: 91px 0 112px 0;
   margin: 0 auto;
   display: flex;
   max-width: 1170px;
   position: relative;
 
   @media (max-width: $tablet) {
-    padding: 80px 0 59px;
+    padding: 80px 0 102px;
   }
 
   @media (max-width: $mobile) {
-    padding: 30px 0 8px 0;
+    padding: 30px 0 41px 0;
   }
 }
 .consalt__feedback {

@@ -17,6 +17,10 @@
   align-items: center;
   margin: 0 0 40px 0;
 
+  &:last-of-type {
+    margin: 0;
+  }
+
   @media (max-width: $tablet) {
     gap: 33px;
     margin: 0 0 43px;
@@ -29,8 +33,22 @@
   }
 }
 .form__area {
+  &--textarea {
+    margin: 0 0 40px 0;
+  }
+
   @media (max-width: $tablet) {
     width: 100%;
+
+    &--textarea {
+      margin: 0 0 38px 0;
+    }
+  }
+
+  @media (max-width: $mobile) {
+    &--textarea {
+      margin: 0 0 24px 0;
+    }
   }
 }
 .form__area input {
@@ -65,7 +83,6 @@
   color: $whiteColor;
   padding: 14px 16px;
   resize: none;
-  margin: 0 0 40px 0;
   font-size: 16px;
   line-height: 22px;
 
@@ -79,12 +96,10 @@
 
   @media (max-width: $tablet) {
     min-height: 160px;
-    margin: 0 0 38px 0;
   }
 
   @media (max-width: $mobile) {
     min-height: 104px;
-    margin: 0 0 24px 0;
   }
 }
 .form__button {

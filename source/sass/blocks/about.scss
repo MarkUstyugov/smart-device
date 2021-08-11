@@ -1,6 +1,6 @@
 .about__body {
   position: relative;
-  padding: 0 0 110px 289px;
+  padding: 37px 0 110px 289px;
   max-width: 1270px;
 
   &::before {
@@ -11,11 +11,11 @@
     background-image: url(../../img/about-2005-desktop.png);
     background-repeat: no-repeat;
     left: 78px;
-    top: 6px;
+    top: 43px;
   }
 
   @media (max-width: $tablet) {
-    padding: 0 0 85px 187px;
+    padding: 14px 0 85px 187px;
 
     &::before {
       width: 251px;
@@ -23,7 +23,7 @@
       background-image: url(../../img/about-2005-tablet.png);
       background-repeat: no-repeat;
       left: -25px;
-      top: 0;
+      top: 14px;
     }
   }
 

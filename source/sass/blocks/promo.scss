@@ -1,23 +1,5 @@
 .promo {
-  background-color: $blackColor;
-  background-image: url(../img/promo-bg.png), url(../img/promo-dekor.svg);
-  background-repeat: no-repeat;
-  background-position: center top, calc(50% + 397px) calc(50% + 80px);
-  background-size: cover, auto;
-  min-height: 878px;
   overflow: hidden;
-
-  @media (max-width: $tablet) {
-    background-size: cover, auto 383px;
-    background-position: center top, calc(50% + 312px) 27%;
-    min-height: 686px;
-  }
-
-  @media (max-width: $mobile) {
-    min-height: auto;
-    background-size: cover, auto 363px;
-    background-position: center top, calc(50% + 235px) 25%;
-  }
 }
 .promo__container {
   max-width: 1440px;
@@ -25,15 +7,15 @@
   padding: 0 14px;
 }
 .promo__body {
-  padding: 315px 0 0 0;
+  padding: 197px 0 277px 0;
   position: relative;
 
   @media (max-width: $tablet) {
-    padding: 188px 0 0 0;
+    padding: 115px 0 94px 0;
   }
 
   @media (max-width: $mobile) {
-    padding: 287px 0 0 0;
+    padding: 232px 0 70px 0;
   }
 }
 .promo__content {
@@ -144,7 +126,7 @@
 
   @media (max-width: $mobile) {
     width: 287px;
-    margin: 0 auto 70px;
+    margin: 0 auto;
   }
 }
 .promo__scroll {
@@ -165,15 +147,14 @@
 .promo__image-wrapper {
   position: absolute;
   width: 705px;
-  height: 515px;
   left: calc(50% + 78px);
-  bottom: -172px;
+  bottom: 99px;
   z-index: 0;
 
   @media (max-width: $tablet) {
     width: 465px;
     height: 340px;
-    top: 114px;
+    top: 41px;
     left: calc(50% + 124px);
     bottom: auto;
   }
@@ -181,7 +162,7 @@
   @media (max-width: $mobile) {
     width: 301px;
     height: 202px;
-    top: 78px;
+    top: 22px;
     left: calc(50%);
     transform: translate(-49%, 0);
   }

@@ -1,9 +1,24 @@
-.header {
+.page__header {
+  background-color: $blackColor;
+  background-image: url(../img/promo-bg.png), url(../img/promo-dekor.svg);
+  background-repeat: no-repeat;
+  background-position: center top, calc(50% + 397px) calc(50% + 80px);
+  background-size: cover, auto;
   min-width: 320px;
-  position: absolute;
-  width: 100%;
-  padding: 33px 0 0 0;
-  z-index: 10;
+
+  @media (max-width: $tablet) {
+    background-size: cover, auto 383px;
+    background-position: center top, calc(50% + 312px) 82px;
+  }
+
+  @media (max-width: $mobile) {
+    min-height: auto;
+    background-size: cover, auto 363px;
+    background-position: center top, calc(50% + 235px) 70px;
+  }
+}
+.header {
+  padding: 33px 0 33px 0;
 
   @media (max-width: $tablet) {
     padding: 20px 0 0 0;
