@@ -126,20 +126,20 @@ const closeModalEsc = (evt) => {
   }
 }
 
-document.querySelectorAll('.footer__title-button').forEach((item) => {
+document.querySelectorAll('.footer__title h2').forEach((item) => {
   item.addEventListener('click', () => {
     const parent = item.parentNode.parentNode;
 
-    if (parent.querySelector('.footer__menu-dropdown').classList.contains('footer__menu-dropdown--show') && parent.querySelector('.footer__title-button').classList.contains('footer__title-button--close')) {
+    if (parent.querySelector('.footer__menu-dropdown').classList.contains('footer__menu-dropdown--show') && parent.querySelector('.footer__title').classList.contains('footer__title--close')) {
       parent.querySelector('.footer__menu-dropdown').classList.remove('footer__menu-dropdown--show');
-      parent.querySelector('.footer__title-button').classList.remove('footer__title-button--close');
+      parent.querySelector('.footer__title').classList.remove('footer__title--close');
     } else {
       document.querySelectorAll('.footer__dropdown').forEach((child) => {
         child.querySelector('.footer__menu-dropdown').classList.remove('footer__menu-dropdown--show');
-        child.querySelector('.footer__title-button').classList.remove('footer__title-button--close');
+        child.querySelector('.footer__title').classList.remove('footer__title--close');
 
         parent.querySelector('.footer__menu-dropdown').classList.add('footer__menu-dropdown--show');
-        parent.querySelector('.footer__title-button').classList.add('footer__title-button--close');
+        parent.querySelector('.footer__title').classList.add('footer__title--close');
       })
     }
   })
@@ -172,6 +172,10 @@ const setMask = function (input) {
   input.addEventListener('keydown', (evt) => {
     let numberLength = input.value.length;
 
+    if (evt.key == 'Backspace' && numberLength < 4) {
+      evt.preventDefault();
+    }
+
     if (numberLength === 6 && evt.key !== 'Backspace') {
       input.value = input.value + ')';
     }
@@ -198,16 +202,16 @@ if (phoneNumber) {
   }
 }
 
-const copyright = document.querySelector('.footer__copyright');
-const bottomCopyright = copyright.cloneNode(true);
-const footerRights = document.querySelector('.footer__rights');
+// const copyright = document.querySelector('.footer__copyright');
+// const bottomCopyright = copyright.cloneNode(true);
+// const footerRights = document.querySelector('.footer__rights');
 
-if (bottomCopyright) {
-  bottomCopyright.classList.add('footer__bottom-item');
-}
+// if (bottomCopyright) {
+//   bottomCopyright.classList.add('footer__bottom-item');
+// }
 
-const insertBeforeElement = (newNode, referenceNode) => {
-  referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
-}
+// const insertBeforeElement = (newNode, referenceNode) => {
+//   referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
+// }
 
-insertBeforeElement(bottomCopyright, footerRights);
+// insertBeforeElement(bottomCopyright, footerRights);

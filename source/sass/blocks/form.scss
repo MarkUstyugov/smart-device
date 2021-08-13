@@ -10,7 +10,6 @@
     width: 100%;
   }
 }
-
 .form__area-wrapper {
   display: flex;
   justify-content: space-between;
@@ -22,14 +21,12 @@
   }
 
   @media (max-width: $tablet) {
-    gap: 33px;
     margin: 0 0 43px;
   }
 
   @media (max-width: $mobile) {
-    gap: 31px;
     flex-direction: column;
-    margin: 0 0 33px;
+    margin: 0;
   }
 }
 .form__area {
@@ -38,14 +35,18 @@
   }
 
   @media (max-width: $tablet) {
-    width: 100%;
+    width: 47.3%;
 
     &--textarea {
       margin: 0 0 38px 0;
+      width: 100%;
     }
   }
 
   @media (max-width: $mobile) {
+    width: 100%;
+    margin: 0 0 32px 0;
+
     &--textarea {
       margin: 0 0 24px 0;
     }
@@ -116,8 +117,12 @@
   }
 
   @media (max-width: $tablet) {
-    width: 100%;
+    width: 47.3%;
     height: 46.65px;
+  }
+  @media (max-width: $mobile) {
+    width: 100%;
+    margin: 0 0 30px 0;
   }
 }
 .form input[type="checkbox"] {
@@ -146,7 +151,7 @@
 
   @media (max-width: $tablet) {
     width: 100%;
-    margin: 0 0 0 4px;
+    margin: 0 0 0 8px;
   }
 
   @media (max-width: $mobile) {
@@ -161,5 +166,10 @@
     background-image: url(../img/checked.svg);
     background-repeat: no-repeat;
     background-position: center;
+  }
+}
+.form__area--checkbox {
+  @media(max-width: $mobile) {
+    margin: 0;
   }
 }
