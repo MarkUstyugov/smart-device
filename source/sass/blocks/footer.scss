@@ -356,4 +356,14 @@
 }
 .footer__title--close h2::before {
   background-image: url(../img/accordion-close.svg);
+  right: 17px;
+}
+.footer__menu-container .footer__title {
+  @media (max-width: $tablet) {
+    margin: 0 0 25px 0;
+  }
+
+  @media (max-width: $mobile) {
+    margin: 0;
+  }
 }
