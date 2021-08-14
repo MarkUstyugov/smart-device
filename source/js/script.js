@@ -5,7 +5,7 @@ const headerBtn = document.querySelector('.header__button');
 const modal = document.querySelector('.modal');
 const closeModalBtn = modal.querySelector('.modal__close-button');
 const body = document.querySelector('.page');
-const menyBtn = document.querySelectorAll('.footer__title-button');
+const menyBtn = document.querySelectorAll('.footer__title');
 const menu = document.querySelectorAll('.footer__menu-dropdown');
 const noJs = document.querySelector('.no-js');
 
@@ -32,7 +32,7 @@ const hiddeDropdownMenu = () => {
   })
 
   menyBtn.forEach((item) => {
-    item.classList.remove('footer__title-button--close');
+    item.classList.remove('footer__title--close');
   })
 }
 
@@ -127,7 +127,7 @@ const closeModalEsc = (evt) => {
 }
 
 
-document.querySelectorAll('.footer__title h2').forEach((item) => {
+document.querySelectorAll('.footer__title').forEach((item) => {
   item.addEventListener('click', () => {
     const parent = item.parentNode.parentNode;
     if (document.documentElement.clientWidth < 768) {
@@ -205,16 +205,13 @@ if (phoneNumber) {
   }
 }
 
-// const copyright = document.querySelector('.footer__copyright');
-// const bottomCopyright = copyright.cloneNode(true);
-// const footerRights = document.querySelector('.footer__rights');
+const footerRights = document.querySelector('.footer__bottom-item--rights');
+const copyright = document.querySelector(".footer__copyright").innerHTML;
 
-// if (bottomCopyright) {
-//   bottomCopyright.classList.add('footer__bottom-item');
-// }
-
-// const insertBeforeElement = (newNode, referenceNode) => {
-//   referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
-// }
-
-// insertBeforeElement(bottomCopyright, footerRights);
+if (footerRights && copyright) {
+  footerRights.insertAdjacentHTML(
+    "afterend", `<li class="footer__bottom-item footer__bottom-item--copyright">
+    <a class="footer__bottom-link">${copyright}</a>
+  </li>`
+  );
+}

@@ -210,7 +210,7 @@
   margin: 0;
 
   @media (max-width: $tablet) {
-    padding: 20px 0;
+    padding: 22px 0 20px;
   }
 
   @media (max-width: $mobile) {
@@ -234,7 +234,7 @@
     padding: 0;
   }
 }
-.footer__bottom-item {
+.footer__bottom-link {
   text-decoration: none;
   color: rgba($blackColor, 0.5);
 
@@ -242,7 +242,7 @@
     margin: 0 0 20px 0;
   }
 }
-.footer__bottom-item1 {
+.footer__bottom-item {
   margin: 0 30px 0 0;
 
   &:last-child {
@@ -258,14 +258,14 @@
     color: rgba($blackColor, 0.3);
   }
 }
-.footer__rights {
+.footer__bottom-item--rights {
   flex-grow: 0.7;
 
   @media (max-width: $tablet) {
     display: none;
   }
 }
-.footer__confidentiality {
+.footer__bottom-item--confidentiality {
   flex-grow: 6.2;
 
   @media (max-width: $mobile) {
@@ -274,8 +274,9 @@
 }
 .footer__title {
   @media (max-width: $mobile) {
-    display: flex;
-    justify-content: space-between;
+    padding: 28px 15px 28px 15px;
+    width: 100%;
+    position: relative;
   }
 }
 .footer__menu-container,
@@ -286,14 +287,14 @@
 .footer__menu-dropdown {
   @media (max-width: $mobile) {
     display: none;
-    margin: 0 20px 23px 15px;
+    margin: 5px 20px 25px 15px;
 
     &--show {
       display: block;
     }
   }
 }
-.footer__copyright {
+.footer__bottom-item--copyright {
   display: block;
   font-size: 13px;
   line-height: 24px;
@@ -315,6 +316,11 @@
 .footer__main .footer__copyright {
   display: none;
   flex-grow: 1;
+  color: rgba($blackColor, 0.5);
+  font-size: 13px;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+  text-decoration: none;
 
   @media (max-width: $tablet) {
     display: block;
@@ -325,22 +331,7 @@
     margin: 0 0 30px 0;
   }
 }
-.footer__menu h2 {
-  @media (max-width: $mobile) {
-    padding: 28px 15px 28px 15px;
-    width: 100%;
-    position: relative;
-  }
-}
-.footer__contacts h2 {
-  @media (max-width: $mobile) {
-    padding: 28px 15px 26px 15px;
-    width: 100%;
-    position: relative;
-  }
-}
-.footer__menu h2::before,
-.footer__contacts h2::before {
+.footer__title::before {
   @media (max-width: $mobile) {
     content: "";
     position: absolute;
@@ -354,7 +345,7 @@
     transform: translateY(-50%);
   }
 }
-.footer__title--close h2::before {
+.footer__title--close::before {
   background-image: url(../img/accordion-close.svg);
   right: 17px;
 }

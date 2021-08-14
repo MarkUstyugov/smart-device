@@ -100,7 +100,7 @@ button {
     display: block;
   }
 }
-.no-js .footer__title-button {
+.no-js .footer__title::before {
   @media(max-width: $mobile) {
     display: none;
   }
